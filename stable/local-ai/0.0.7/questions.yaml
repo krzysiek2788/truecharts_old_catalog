@@ -183,9 +183,17 @@ questions:
                 description: Cublas
               - value: clblas
                 description: Clblas
+              - value: hipblas
+                description: Hipblas
         - variable: debug
           label: Debug
           description: Enable Debug Mode.
+          schema:
+            type: boolean
+            default: false
+        - variable: rebuild
+          label: Rebuild
+          description: Enable Rebuild.
           schema:
             type: boolean
             default: false

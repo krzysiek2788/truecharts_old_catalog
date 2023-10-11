@@ -38,9 +38,10 @@ service:
         port: 8080
 
 localai:
-  # Specify a build type. Available: cublas, openblas, clblas.
+  # Specify a build type. Available: cublas, openblas, clblas, hipblas.
   build_type: "openblas"
   debug: false
+  rebuild: false
   cors: true
   cors_allow_origins: "*"
   galleries: []
@@ -74,7 +75,7 @@ workload:
             IMAGE_PATH: "{{ .Values.persistence.images.mountPath }}"
             BUILD_TYPE: "{{ .Values.localai.build_type }}"
             # breaks chart if true, keep it false.
-            REBUILD: false
+            REBUILD: "{{ .Values.localai.rebuild }}"
             DEBUG: "{{ .Values.localai.debug }}"
             CORS: "{{ .Values.localai.cors }}"
             GALLERIES: "{{ toJson .Values.localai.galleries }}"

@@ -11,7 +11,7 @@
             "definitions/certificate",
             "normalize/interfaceConfiguration"
         ],
-        "human_version": "18.1.0_4.0.28",
+        "human_version": "6.2.7_4.0.28",
         "version": "4.0.28",
         "chart_metadata": {
             "annotations": {
@@ -24,7 +24,7 @@
                 "truecharts.org/train": "incubator"
             },
             "apiVersion": "v2",
-            "appVersion": "18.1.0",
+            "appVersion": "6.2.7",
             "dependencies": [
                 {
                     "name": "common",

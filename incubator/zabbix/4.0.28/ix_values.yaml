@@ -37,7 +37,15 @@ securityContext:
 podSecurityContext:
   runAsUser: 1997
   runAsGroup: 0
-
+  
+database:
+  # -- Database type,
+  # must be one of: 'sqlite', 'mysql' or 'postgresql'.
+  type: postgresql
+  # -- Enable DB Write-Ahead-Log for SQLite,
+  # disabled for other databases. https://github.com/dani-garcia/bitwarden_rs/wiki/Running-without-WAL-enabled
+  wal: true
+  
 zabbix:
   # -- https://www.zabbix.com/documentation/current/en/manual/appendix/config/zabbix_server
   server:
@@ -287,11 +295,11 @@ persistence:
     mountPath: /usr/sbin/zabbix_java/ext_lib
     size: 256Gi
 
-postgresql:
-  enabled: true
-  existingSecret: "dbcreds"
-  postgresqlUsername: zabbix
-  postgresqlDatabase: zabbix
+cnpg:
+  main:
+    enabled: true
+    user: zabbix
+    database: zabbix
 
 portal:
   enabled: true

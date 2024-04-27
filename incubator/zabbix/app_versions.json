@@ -11,8 +11,8 @@
             "definitions/certificate",
             "normalize/interfaceConfiguration"
         ],
-        "human_version": "18.1.0_4.0.28",
-        "version": "4.0.28",
+        "human_version": "18.1.0_7.0",
+        "version": "7.0",
         "chart_metadata": {
             "annotations": {
                 "max_scale_version": "24.04.0",
@@ -59,7 +59,7 @@
                 "https://ghcr.io/atuinsh/atuin"
             ],
             "type": "application",
-            "version": "4.0.28"
+            "version": "7.0"
         },
         "app_metadata": null,
         "schema": {

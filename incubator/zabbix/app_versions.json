@@ -342,7 +342,7 @@
                     }
                 },
                 {
-                    "variable": "atuin",
+                    "variable": "zabbix",
                     "group": "App Configuration",
                     "label": "Atuin Configuration",
                     "schema": {

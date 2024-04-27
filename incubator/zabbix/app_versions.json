@@ -1,9 +1,9 @@
 {
-    "4.0.28": {
+    "7.0": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/home/runner/work/catalog/catalog/incubator/zabbix/4.0.28",
+        "location": "/home/runner/work/catalog/catalog/incubator/zabbix/7.0",
         "last_update": "2024-04-25 06:48:17",
         "required_features": [
             "definitions/interface",
@@ -11,8 +11,8 @@
             "definitions/certificate",
             "normalize/interfaceConfiguration"
         ],
-        "human_version": "18.1.0_4.0.28",
-        "version": "4.0.28",
+        "human_version": "19.1.0_7.0",
+        "version": "7.0",
         "chart_metadata": {
             "annotations": {
                 "max_scale_version": "24.04.0",
@@ -24,7 +24,7 @@
                 "truecharts.org/train": "incubator"
             },
             "apiVersion": "v2",
-            "appVersion": "18.1.0",
+            "appVersion": "19.1.0",
             "dependencies": [
                 {
                     "name": "common",
@@ -59,7 +59,7 @@
                 "https://ghcr.io/atuinsh/atuin"
             ],
             "type": "application",
-            "version": "4.0.28"
+            "version": "7.0"
         },
         "app_metadata": null,
         "schema": {

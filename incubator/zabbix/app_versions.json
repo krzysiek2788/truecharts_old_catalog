@@ -1,9 +1,9 @@
 {
-    "7.0": {
+    "7.0.0": {
         "healthy": true,
         "supported": true,
         "healthy_error": null,
-        "location": "/home/runner/work/catalog/catalog/incubator/zabbix/7.0",
+        "location": "/home/runner/work/catalog/catalog/incubator/zabbix/7.0.0",
         "last_update": "2024-04-25 06:48:17",
         "required_features": [
             "definitions/interface",
@@ -12,7 +12,7 @@
             "normalize/interfaceConfiguration"
         ],
         "human_version": "19.1.0_7.0.0",
-        "version": "7.0",
+        "version": "7.0.0",
         "chart_metadata": {
             "annotations": {
                 "max_scale_version": "24.04.0",

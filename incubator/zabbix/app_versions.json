@@ -11,7 +11,7 @@
             "definitions/certificate",
             "normalize/interfaceConfiguration"
         ],
-        "human_version": "19.1.0_7.0",
+        "human_version": "19.1.0_7.0.0",
         "version": "7.0",
         "chart_metadata": {
             "annotations": {
@@ -57,7 +57,7 @@
                 "https://github.com/truecharts/charts/tree/master/charts/incubator/zabbix"
             ],
             "type": "application",
-            "version": "7.0"
+            "version": "7.0.0"
         },
 
                 "app_metadata": null,

@@ -30,5 +30,5 @@ name: zabbix
 sources:
   - https://github.com/truecharts/charts/tree/master/charts/incubator/zabbix
 type: application
-version: "7.0"
+version: "7.0.0"
 

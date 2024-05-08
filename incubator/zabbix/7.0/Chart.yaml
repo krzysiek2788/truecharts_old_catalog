@@ -1,20 +1,27 @@
+annotations:
+  max_scale_version: 24.04.1
+  min_scale_version: 24.04.0
+  truecharts.org/SCALE-support: "true"
+  truecharts.org/category: utilities
+  truecharts.org/max_helm_version: "3.14"
+  truecharts.org/min_helm_version: "3.11"
 apiVersion: v2
-appVersion: "7.0"
+appVersion: "19.1.0"
 dependencies:
   - name: common
-    repository: https://library-charts.truecharts.org
-    version: 20.3.11
-  - condition: postgresql.enabled
-    name: postgresql
-    repository: https://deps.truecharts.org/
-    version: 20.3.11
+    version: 23.0.0
+    repository: oci://tccr.io/truecharts
+    condition: ""
+    alias: ""
+    tags: []
+    import-values: []
 description: Zabbix is an enterprise-class open source distributed monitoring solution.
 home: https://truecharts.org/charts/incubator/zabbix
 icon: https://truecharts.org/img/hotlink-ok/chart-icons/zabbix.png
 keywords:
   - zabbix
   - monitoring
-kubeVersion: ">=1.16.0-0"
+kubeVersion: ">=1.24.0-0"
 maintainers:
   - email: info@truecharts.org
     name: TrueCharts
@@ -22,9 +29,6 @@ maintainers:
 name: zabbix
 sources:
   - https://github.com/truecharts/charts/tree/master/charts/incubator/zabbix
-version: 7.0
-annotations:
-  truecharts.org/catagories: |
-    - utilities
-  truecharts.org/SCALE-support: "true"
-  truecharts.org/grade: U
+type: application
+version: "7.0"
+

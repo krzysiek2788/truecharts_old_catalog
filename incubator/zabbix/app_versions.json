@@ -38,10 +38,10 @@
             ],
             "deprecated": false,
             "description": "Magical shell history.",
-            "home": "https://truecharts.org/charts/incubator/atuin",
-            "icon": "https://truecharts.org/img/hotlink-ok/chart-icons/atuin.webp",
+            "home": "https://truecharts.org/charts/incubator/zabbix",
+            "icon": "https://truecharts.org/img/hotlink-ok/chart-icons/zabbix.webp",
             "keywords": [
-                "atuin",
+                "zabbix",
                 "shell"
             ],
             "kubeVersion": ">=1.24.0-0",
@@ -54,9 +54,7 @@
             ],
             "name": "atuin",
             "sources": [
-                "https://github.com/atuinsh/atuin",
-                "https://github.com/truecharts/charts/tree/master/charts/incubator/atuin",
-                "https://ghcr.io/atuinsh/atuin"
+                "https://github.com/truecharts/charts/tree/master/charts/incubator/zabbix"
             ],
             "type": "application",
             "version": "7.0"
@@ -674,9 +672,9 @@
                             }
                         },
                         {
-                            "variable": "kometa",
+                            "variable": "zabbix",
                             "group": "App Configuration",
-                            "label": "Kometa Configuration",
+                            "label": "Zabbix Configuration",
                             "schema": {
                                 "additional_attrs": true,
                                 "type": "dict",

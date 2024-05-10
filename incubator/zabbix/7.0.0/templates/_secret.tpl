@@ -1,8 +1,8 @@
 {{/* Define the secret */}}
 {{- define "zabbix.secret" -}}
 
-{{- $serverSecretName := printf "%s-server-secret" (include "tc.v1.common.names.fullname" .) }}
-{{- $commonSecretName := printf "%s-common-secret" (include "tc.v1.common.names.fullname" .) }}
+{{- $serverSecretName := printf "%s-server-secret" (include "tc.v1.common.lib.chart.names.fullname" .) }}
+{{- $commonSecretName := printf "%s-common-secret" (include "tc.v1.common.lib.chart.names.fullname" .) }}
 
 ---
 

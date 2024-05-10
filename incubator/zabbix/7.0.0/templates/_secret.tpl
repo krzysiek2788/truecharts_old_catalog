@@ -12,7 +12,7 @@ type: Opaque
 metadata:
   name: {{ $commonSecretName }}
   labels:
-    {{- include "tc.common.labels" . | nindent 4 }}
+    {{- include "tc.v1.common.labels" . | nindent 4 }}
 data:
-  POSTGRES_PASSWORD: {{ .Values.postgresql.postgresqlPassword | trimAll "\"" | b64enc }}
+  POSTGRES_PASSWORD: {{ .Values.cnpg.main.password | trimAll "\"" }}
 {{- end }}

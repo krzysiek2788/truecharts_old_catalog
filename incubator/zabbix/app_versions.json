@@ -1920,7 +1920,7 @@
                                         "description": "ClusterIP's are only internally available and Loadbalancer exposes the service using the system loadbalancer",
                                         "schema": {
                                             "type": "string",
-                                            "default": "CluterIP",
+                                            "default": "ClusterIP",
                                             "enum": [
                                                 {
                                                     "value": "LoadBalancer",
@@ -2005,7 +2005,7 @@
                                         "description": "ClusterIP's are only internally available and Loadbalancer exposes the service using the system loadbalancer",
                                         "schema": {
                                             "type": "string",
-                                            "default": "CluterIP",
+                                            "default": "ClusterIP",
                                             "enum": [
                                                 {
                                                     "value": "LoadBalancer",

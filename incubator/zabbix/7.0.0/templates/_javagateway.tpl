@@ -11,7 +11,7 @@ volumeMounts:
     mountPath: {{ .Values.persistence.javagatewaylibs.mountPath }}
 envFrom:
   - configMapRef:
-      name: '{{ include "tc.common.names.fullname" . }}-javagateway-config'
+      name: '{{ include "tc.v1.common.lib.chart.names.fullname" . }}-javagateway-config'
 ports:
   - containerPort: {{ .Values.service.javagateway.ports.javagateway.port }}
     name: javagateway

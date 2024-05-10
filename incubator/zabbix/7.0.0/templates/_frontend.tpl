@@ -8,11 +8,11 @@ securityContext:
   runAsNonRoot: {{ .Values.securityContext.runAsNonRoot }}
 envFrom:
   - secretRef:
-      name: '{{ include "tc.common.names.fullname" . }}-common-secret'
+      name: '{{ include "tc.v1.common.lib.chart.names.fullname" . }}-common-secret'
   - configMapRef:
-      name: '{{ include "tc.common.names.fullname" . }}-common-config'
+      name: '{{ include "tc.v1.common.lib.chart.names.fullname" . }}-common-config'
   - configMapRef:
-      name: '{{ include "tc.common.names.fullname" . }}-frontend-config'
+      name: '{{ include "tc.v1.common.lib.chart.names.fullname" . }}-frontend-config'
 ports:
   - containerPort: {{ .Values.service.main.ports.main.targetPort }}
     name: main

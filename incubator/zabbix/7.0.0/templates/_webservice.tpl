@@ -8,7 +8,7 @@ securityContext:
   runAsNonRoot: {{ .Values.securityContext.runAsNonRoot }}
 envFrom:
   - configMapRef:
-      name: '{{ include "tc.common.names.fullname" . }}-webservice-config'
+      name: '{{ include "tc.v1.common.lib.chart.names.fullname" . }}-webservice-config'
 ports:
   - containerPort: {{ .Values.service.webservice.ports.webservice.port }}
     name: webservice

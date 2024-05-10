@@ -22,7 +22,7 @@ volumeMounts:
     mountPath: {{ .Values.persistence.agentbuffer.mountPath }}
 envFrom:
   - configMapRef:
-      name: '{{ include "tc.common.names.fullname" . }}-agent-config'
+      name: '{{ include "tc.v1.common.lib.chart.names.fullname" . }}-agent-config'
 ports:
   - containerPort: {{ .Values.service.agent.ports.agent.port }}
     name: agent

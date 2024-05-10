@@ -1,12 +1,12 @@
 {{/* Define the configmap */}}
 {{- define "zabbix.config" -}}
 
-{{- $serverConfigName := printf "%s-server-config" (include "tc.common.names.fullname" .) }}
-{{- $commonConfigName := printf "%s-common-config" (include "tc.common.names.fullname" .) }}
-{{- $frontendConfigName := printf "%s-frontend-config" (include "tc.common.names.fullname" .) }}
-{{- $agentConfigName := printf "%s-agent-config" (include "tc.common.names.fullname" .) }}
-{{- $javagatewayConfigName := printf "%s-javagateway-config" (include "tc.common.names.fullname" .) }}
-{{- $webserviceConfigName := printf "%s-webservice-config" (include "tc.common.names.fullname" .) }}
+{{- $serverConfigName := printf "%s-server-config" (include "tc.v1.common.lib.chart.names.fullname" .) }}
+{{- $commonConfigName := printf "%s-common-config" (include "tc.v1.common.lib.chart.names.fullname" .) }}
+{{- $frontendConfigName := printf "%s-frontend-config" (include "tc.v1.common.lib.chart.names.fullname" .) }}
+{{- $agentConfigName := printf "%s-agent-config" (include "tc.v1.common.lib.chart.names.fullname" .) }}
+{{- $javagatewayConfigName := printf "%s-javagateway-config" (include "tc.v1.common.lib.chart.names.fullname" .) }}
+{{- $webserviceConfigName := printf "%s-webservice-config" (include "tc.v1.common.lib.chart.names.fullname" .) }}
 
 ---
 
@@ -17,10 +17,10 @@ metadata:
   labels:
     {{- include "tc.common.labels" . | nindent 4 }}
 data:
-  DB_SERVER_HOST: {{ printf "%v-%v" .Release.Name "postgresql" }}
+  DB_SERVER_HOST: {{ .Values.cnpg.main.creds.host | trimAll "\"" }}
   DB_SERVER_PORT: "5432"
-  POSTGRES_USER: {{ .Values.postgresql.postgresqlUsername }}
-  POSTGRES_DB: {{ .Values.postgresql.postgresqlDatabase }}
+  POSTGRES_USER: {{ .Values.cnpg.main.user | quote }}
+  POSTGRES_DB: {{ .Values.cnpg.main.database | quote }}
 
 ---
 

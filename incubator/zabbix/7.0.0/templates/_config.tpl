@@ -15,7 +15,7 @@ kind: ConfigMap
 metadata:
   name: {{ $commonConfigName }}
   labels:
-    {{- include "tc.common.labels" . | nindent 4 }}
+    {{- include "tc.v1.common.lib.metadata.allLabels" . | nindent 4 }}
 data:
   DB_SERVER_HOST: {{ .Values.cnpg.main.creds.host | trimAll "\"" }}
   DB_SERVER_PORT: "5432"
@@ -30,7 +30,7 @@ kind: ConfigMap
 metadata:
   name: {{ $serverConfigName }}
   labels:
-    {{- include "tc.common.labels" . | nindent 4 }}
+    {{- include "tc.v1.common.lib.metadata.allLabels" . | nindent 4 }}
 data:
   ZBX_LISTENPORT: {{ .Values.service.server.ports.server.port | quote }}
   {{- with $server.listen_backlog }}
@@ -98,7 +98,7 @@ kind: ConfigMap
 metadata:
   name: {{ $agentConfigName }}
   labels:
-    {{- include "tc.common.labels" . | nindent 4 }}
+    {{- include "tc.v1.common.lib.metadata.allLabels" . | nindent 4 }}
 data:
   ZBX_SERVER_HOST: localhost
   ZBX_SERVER_PORT: {{ .Values.service.server.ports.server.port | quote }}
@@ -149,7 +149,7 @@ kind: ConfigMap
 metadata:
   name: {{ $frontendConfigName }}
   labels:
-    {{- include "tc.common.labels" . | nindent 4 }}
+    {{- include "tc.v1.common.lib.metadata.allLabels" . | nindent 4 }}
 data:
   PHP_TZ: {{ .Values.TZ }}
   ZBX_SERVER_HOST: localhost
@@ -185,7 +185,7 @@ kind: ConfigMap
 metadata:
   name: {{ $javagatewayConfigName }}
   labels:
-    {{- include "tc.common.labels" . | nindent 4 }}
+    {{- include "tc.v1.common.lib.metadata.allLabels" . | nindent 4 }}
 data:
   ZBX_START_POLLERS: {{ $javagateway.start_pollers | quote }}
   ZBX_TIMEOUT: {{ $javagateway.timeout | quote }}
@@ -200,7 +200,7 @@ kind: ConfigMap
 metadata:
   name: {{ $webserviceConfigName }}
   labels:
-    {{- include "tc.common.labels" . | nindent 4 }}
+    {{- include "tc.v1.common.lib.metadata.allLabels" . | nindent 4 }}
 data:
   ZBX_LISTENPORT: {{ .Values.service.webservice.ports.webservice.port | quote }}
   ZBX_ALLOWEDIP: localhost

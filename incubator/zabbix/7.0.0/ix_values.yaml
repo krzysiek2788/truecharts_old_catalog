@@ -127,6 +127,24 @@ zabbix:
       failureThreshold: 120
       successThreshold: 1
       port: "{{ .Values.service.server.ports.server.port }}"
+    readinessProbe:
+      enabled: true
+      path: /-/ready
+      initialDelaySeconds: 0
+      periodSeconds: 5
+      timeoutSeconds: 3
+      failureThreshold: 120
+      successThreshold: 1
+      port: "{{ .Values.service.server.ports.server.port }}"
+    startupProbe:
+      enabled: true
+      path: /-/ready
+      initialDelaySeconds: 0
+      periodSeconds: 5
+      timeoutSeconds: 3
+      failureThreshold: 120
+      successThreshold: 1
+      port: "{{ .Values.service.server.ports.server.port }}"
   agent:
     enabled: true
     hostname:
@@ -210,24 +228,7 @@ service:
         enabled: true
         protocol: HTTP
         port: 10053
-  readinessProbe:
-    enabled: true
-    path: /-/ready
-    initialDelaySeconds: 0
-    periodSeconds: 5
-    timeoutSeconds: 3
-    failureThreshold: 120
-    successThreshold: 1
-    port: "{{ .Values.service.server.ports.server.port }}"
-  startupProbe:
-    enabled: true
-    path: /-/ready
-    initialDelaySeconds: 0
-    periodSeconds: 5
-    timeoutSeconds: 3
-    failureThreshold: 120
-    successThreshold: 1
-    port: "{{ .Values.service.server.ports.server.port }}"
+
 
 persistence:
   # Server

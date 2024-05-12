@@ -201,13 +201,33 @@ service:
         enabled: true
         protocol: HTTP
         port: 10053
-
-probes:
-  liveness:
+alertmanager:
+  livenessProbe:
+    enabled: true
+    path: /-/healthy
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 120
+    successThreshold: 1
     port: "{{ .Values.service.server.ports.server.port }}"
-  readiness:
+  readinessProbe:
+    enabled: true
+    path: /-/ready
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 120
+    successThreshold: 1
     port: "{{ .Values.service.server.ports.server.port }}"
-  startup:
+  startupProbe:
+    enabled: true
+    path: /-/ready
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 120
+    successThreshold: 1
     port: "{{ .Values.service.server.ports.server.port }}"
 
 persistence:

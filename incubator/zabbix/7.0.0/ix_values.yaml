@@ -171,12 +171,14 @@ service:
     ports:
       server:
         enabled: true
+        protocol: TCP
         port: 10051
   javagateway:
     enabled: true
     ports:
       javagateway:
         enabled: true
+        protocol: TCP
         port: 10052
   snmptraps:
     enabled: true
@@ -192,6 +194,7 @@ service:
     ports:
       agent:
         enabled: true
+        protocol: TCP
         port: 10050
   webservice:
     type: ClusterIP

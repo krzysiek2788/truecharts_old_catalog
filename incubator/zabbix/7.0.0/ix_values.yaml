@@ -118,33 +118,6 @@ zabbix:
     php_fpm_pm_min_spare_servers: 5
     php_fpm_pm_max_spare_servers: 35
     php_fpm_pm_max_requests: 0
-    livenessProbe:
-      enabled: true
-      path: /-/healthy
-      initialDelaySeconds: 0
-      periodSeconds: 5
-      timeoutSeconds: 3
-      failureThreshold: 120
-      successThreshold: 1
-      port: "{{ .Values.service.server.ports.server.port }}"
-    readinessProbe:
-      enabled: true
-      path: /-/ready
-      initialDelaySeconds: 0
-      periodSeconds: 5
-      timeoutSeconds: 3
-      failureThreshold: 120
-      successThreshold: 1
-      port: "{{ .Values.service.server.ports.server.port }}"
-    startupProbe:
-      enabled: true
-      path: /-/ready
-      initialDelaySeconds: 0
-      periodSeconds: 5
-      timeoutSeconds: 3
-      failureThreshold: 120
-      successThreshold: 1
-      port: "{{ .Values.service.server.ports.server.port }}"
   agent:
     enabled: true
     hostname:
@@ -228,7 +201,33 @@ service:
         enabled: true
         protocol: HTTP
         port: 10053
-
+  livenessProbe:
+    enabled: true
+    path: /-/healthy
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 120
+    successThreshold: 1
+    port: "{{ .Values.service.server.ports.server.port }}"
+  readinessProbe:
+    enabled: true
+    path: /-/ready
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 120
+    successThreshold: 1
+    port: "{{ .Values.service.server.ports.server.port }}"
+  startupProbe:
+    enabled: true
+    path: /-/ready
+    initialDelaySeconds: 0
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 120
+    successThreshold: 1
+    port: "{{ .Values.service.server.ports.server.port }}"
 
 persistence:
   # Server

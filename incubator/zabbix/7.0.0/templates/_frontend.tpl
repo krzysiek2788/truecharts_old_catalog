@@ -20,10 +20,10 @@ readinessProbe:
   httpGet:
     path: /
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.readinessProbe.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.readinessProbe.timeoutSeconds }}
-  periodSeconds: {{ .Values.readinessProbe.periodSeconds }}
-  failureThreshold: {{ .Values.readinessProbe.failureThreshold }}
+  initialDelaySeconds: {{ .Values.zabbix.readinessProbe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.zabbix.readinessProbe.timeoutSeconds }}
+  periodSeconds: {{ .Values.zabbix.readinessProbe.periodSeconds }}
+  failureThreshold: {{ .Values.zabbix.readinessProbe.failureThreshold }}
 livenessProbe:
   httpGet:
     path: /

@@ -164,27 +164,27 @@ service:
     ports:
       main:
         port: 10211
-        protocol: HTTP
+        protocol: http
         targetPort: 8080
   server:
     enabled: true
     ports:
       server:
         enabled: true
-        protocol: TCP
+        protocol: tcp
         port: 10051
   javagateway:
     enabled: true
     ports:
       javagateway:
         enabled: true
-        protocol: TCP
+        protocol: tcp
         port: 10052
   snmptraps:
     enabled: true
     ports:
       snmptraps:
-        protocol: UDP
+        protocol: udp
         enabled: true
         port: 162
         targetPort: 1162
@@ -194,7 +194,7 @@ service:
     ports:
       agent:
         enabled: true
-        protocol: TCP
+        protocol: tcp
         port: 10050
   webservice:
     type: ClusterIP
@@ -202,7 +202,7 @@ service:
     ports:
       webservice:
         enabled: true
-        protocol: HTTP
+        protocol: http
         port: 10053
   livenessProbe:
     enabled: true

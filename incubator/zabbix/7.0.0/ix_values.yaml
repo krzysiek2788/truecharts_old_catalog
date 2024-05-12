@@ -201,7 +201,6 @@ service:
         enabled: true
         protocol: HTTP
         port: 10053
-alertmanager:
   livenessProbe:
     enabled: true
     path: /-/healthy

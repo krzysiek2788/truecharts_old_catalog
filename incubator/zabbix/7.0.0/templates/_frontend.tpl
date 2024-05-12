@@ -28,16 +28,16 @@ livenessProbe:
   httpGet:
     path: /
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.zabbix.livenessProbe.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.zabbix.livenessProbe.timeoutSeconds }}
-  periodSeconds: {{ .Values.zabbix.livenessProbe.periodSeconds }}
-  failureThreshold: {{ .Values.zabbix.livenessProbe.failureThreshold }}
+  initialDelaySeconds: {{ .Values.zabbix.frontend.livenessProbe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.zabbix.frontend.livenessProbe.timeoutSeconds }}
+  periodSeconds: {{ .Values.zabbix.frontend.livenessProbe.periodSeconds }}
+  failureThreshold: {{ .Values.zabbix.frontend.livenessProbe.failureThreshold }}
 startupProbe:
   httpGet:
     path: /
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.zabbix.startupProbe.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.zabbix.startupProbe.timeoutSeconds }}
-  periodSeconds: {{ .Values.zabbix.startupProbe.periodSeconds }}
-  failureThreshold: {{ .Values.zabbix.startupProbe.failureThreshold }}
+  initialDelaySeconds: {{ .Values.zabbix.frontend.startupProbe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.zabbix.frontend.startupProbe.timeoutSeconds }}
+  periodSeconds: {{ .Values.zabbix.frontend.startupProbe.periodSeconds }}
+  failureThreshold: {{ .Values.zabbix.frontend.startupProbe.failureThreshold }}
 {{- end -}}

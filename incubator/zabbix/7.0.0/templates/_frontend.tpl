@@ -20,23 +20,24 @@ readinessProbe:
   httpGet:
     path: /
     port: {{ .Values.service.main.ports.main.targetPort }}
-  timeoutSeconds: {{ .Values.probes.readiness.spec.timeoutSeconds }}
-  periodSeconds: {{ .Values.probes.readiness.spec.periodSeconds }}
-  failureThreshold: {{ .Values.probes.readiness.spec.failureThreshold }}
+  initialDelaySeconds: {{ .Values.zabbix.readinessProbe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.zabbix.readinessProbe.timeoutSeconds }}
+  periodSeconds: {{ .Values.zabbix.readinessProbe.periodSeconds }}
+  failureThreshold: {{ .Values.zabbix.readinessProbe.failureThreshold }}
 livenessProbe:
   httpGet:
     path: /
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.probes.liveness.spec.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.probes.liveness.spec.timeoutSeconds }}
-  periodSeconds: {{ .Values.probes.liveness.spec.periodSeconds }}
-  failureThreshold: {{ .Values.probes.liveness.spec.failureThreshold }}
+  initialDelaySeconds: {{ .Values.zabbix.livenessProbe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.zabbix.livenessProbe.timeoutSeconds }}
+  periodSeconds: {{ .Values.zabbix.livenessProbe.periodSeconds }}
+  failureThreshold: {{ .Values.zabbix.livenessProbe.failureThreshold }}
 startupProbe:
   httpGet:
     path: /
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.probes.startup.spec.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.probes.startup.spec.timeoutSeconds }}
-  periodSeconds: {{ .Values.probes.startup.spec.periodSeconds }}
-  failureThreshold: {{ .Values.probes.startup.spec.failureThreshold }}
+  initialDelaySeconds: {{ .Values.zabbix.startupProbe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.zabbix.startupProbe.timeoutSeconds }}
+  periodSeconds: {{ .Values.zabbix.startupProbe.periodSeconds }}
+  failureThreshold: {{ .Values.zabbix.startupProbe.failureThreshold }}
 {{- end -}}

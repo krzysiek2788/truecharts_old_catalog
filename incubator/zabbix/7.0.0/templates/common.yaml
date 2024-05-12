@@ -7,22 +7,22 @@
 {{/* Render config */}}
 {{- include "zabbix.config" . }}
 
-{{- $_ := set .Values.workload "frontend" (include "zabbix.frontend" . | fromYaml) -}}
+{{- $_ := set .Values.zabbix "frontend" (include "zabbix.frontend" . | fromYaml) -}}
 
 {{- if .Values.zabbix.agent.enabled -}}
-{{- $_ := set .Values.workload "agent2" (include "zabbix.agent2" . | fromYaml) -}}
+{{- $_ := set .Values.zabbix "agent2" (include "zabbix.agent2" . | fromYaml) -}}
 {{- end -}}
 
 {{- if .Values.zabbix.webservice.enabled -}}
-{{- $_ := set .Values.workload "webservice" (include "zabbix.webservice" . | fromYaml) -}}
+{{- $_ := set .Values.zabbix "webservice" (include "zabbix.webservice" . | fromYaml) -}}
 {{- end -}}
 
 {{- if .Values.zabbix.snmptraps.enabled -}}
-{{- $_ := set .Values.workload "snmptraps" (include "zabbix.snmptraps" . | fromYaml) -}}
+{{- $_ := set .Values.zabbix "snmptraps" (include "zabbix.snmptraps" . | fromYaml) -}}
 {{- end -}}
 
 {{- if .Values.zabbix.javagateway.enabled -}}
-{{- $_ := set .Values.workload "javagateway" (include "zabbix.javagateway" . | fromYaml) -}}
+{{- $_ := set .Values.zabbix "javagateway" (include "zabbix.javagateway" . | fromYaml) -}}
 {{- end -}}
 
 {{/* Render the templates */}}

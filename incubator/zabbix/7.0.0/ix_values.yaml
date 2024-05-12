@@ -204,7 +204,7 @@ service:
         enabled: true
         protocol: http
         port: 10053
-  livenessProbe:
+  livenessprobe:
     enabled: true
     path: /-/healthy
     initialDelaySeconds: 0
@@ -213,7 +213,7 @@ service:
     failureThreshold: 120
     successThreshold: 1
     port: "{{ .Values.service.server.ports.server.port }}"
-  readinessProbe:
+  readinessprobe:
     enabled: true
     path: /-/ready
     initialDelaySeconds: 0
@@ -222,7 +222,7 @@ service:
     failureThreshold: 120
     successThreshold: 1
     port: "{{ .Values.service.server.ports.server.port }}"
-  startupProbe:
+  startupprobe:
     enabled: true
     path: /-/ready
     initialDelaySeconds: 0

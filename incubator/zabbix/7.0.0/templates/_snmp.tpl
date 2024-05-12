@@ -17,22 +17,22 @@ ports:
 readinessProbe:
   tcpSocket:
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.service.readinessProbe.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.service.readinessProbe.timeoutSeconds }}
-  periodSeconds: {{ .Values.service.readinessProbe.periodSeconds }}
-  failureThreshold: {{ .Values.service.readinessProbe.failureThreshold }}
+  initialDelaySeconds: {{ .Values.service.readinessprobe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.service.readinessprobe.timeoutSeconds }}
+  periodSeconds: {{ .Values.service.readinessprobe.periodSeconds }}
+  failureThreshold: {{ .Values.service.readinessprobe.failureThreshold }}
 livenessProbe:
   tcpSocket:
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.service.livenessProbe.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.service.livenessProbe.timeoutSeconds }}
-  periodSeconds: {{ .Values.service.livenessProbe.periodSeconds }}
-  failureThreshold: {{ .Values.service.livenessProbe.failureThreshold }}
+  initialDelaySeconds: {{ .Values.service.livenessprobe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.service.livenessprobe.timeoutSeconds }}
+  periodSeconds: {{ .Values.service.livenessprobe.periodSeconds }}
+  failureThreshold: {{ .Values.service.livenessprobe.failureThreshold }}
 startupProbe:
   tcpSocket:
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.service.startupProbe.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.service.startupProbe.timeoutSeconds }}
-  periodSeconds: {{ .Values.service.startupProbe.periodSeconds }}
-  failureThreshold: {{ .Values.service.startupProbe.failureThreshold }}
+  initialDelaySeconds: {{ .Values.service.startupprobe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.service.startupprobe.timeoutSeconds }}
+  periodSeconds: {{ .Values.service.startupprobe.periodSeconds }}
+  failureThreshold: {{ .Values.service.startupprobe.failureThreshold }}
 {{- end -}}

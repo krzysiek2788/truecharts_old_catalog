@@ -43,8 +43,8 @@ livenessProbe:
 startupProbe:
   tcpSocket:
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ Values.zabbix.startupProbe.initialDelaySeconds }}
-  timeoutSeconds: {{ Values.zabbix.startupProbe.timeoutSeconds }}
-  periodSeconds: {{ Values.zabbix.startupProbe.periodSeconds }}
-  failureThreshold: {{ Values.zabbix.startupProbe.failureThreshold }}
+  initialDelaySeconds: {{ .Values.zabbix.startupProbe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.zabbix.startupProbe.timeoutSeconds }}
+  periodSeconds: {{ .Values.zabbix.startupProbe.periodSeconds }}
+  failureThreshold: {{ .Values.zabbix.startupProbe.failureThreshold }}
 {{- end -}}

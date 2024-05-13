@@ -18,22 +18,22 @@ ports:
 readinessProbe:
   tcpSocket:
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.service.readinessprobe.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.service.readinessprobe.timeoutSeconds }}
-  periodSeconds: {{ .Values.service.readinessprobe.periodSeconds }}
-  failureThreshold: {{ .Values.service.readinessprobe.failureThreshold }}
+  initialDelaySeconds: {{ .Values.readinessprobe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.readinessprobe.timeoutSeconds }}
+  periodSeconds: {{ .Values.readinessprobe.periodSeconds }}
+  failureThreshold: {{ .Values.readinessprobe.failureThreshold }}
 livenessProbe:
   tcpSocket:
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.service.livenessprobe.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.service.livenessprobe.timeoutSeconds }}
-  periodSeconds: {{ .Values.service.livenessprobe.periodSeconds }}
-  failureThreshold: {{ .Values.service.livenessprobe.failureThreshold }}
+  initialDelaySeconds: {{ .Values.livenessprobe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.livenessprobe.timeoutSeconds }}
+  periodSeconds: {{ .Values.livenessprobe.periodSeconds }}
+  failureThreshold: {{ .Values.livenessprobe.failureThreshold }}
 startupProbe:
   tcpSocket:
     port: {{ .Values.service.main.ports.main.targetPort }}
-  initialDelaySeconds: {{ .Values.service.startupprobe.initialDelaySeconds }}
-  timeoutSeconds: {{ .Values.service.startupprobe.timeoutSeconds }}
-  periodSeconds: {{ .Values.service.startupprobe.periodSeconds }}
-  failureThreshold: {{ .Values.service.startupprobe.failureThreshold }}
+  initialDelaySeconds: {{ .Values.startupprobe.initialDelaySeconds }}
+  timeoutSeconds: {{ .Values.startupprobe.timeoutSeconds }}
+  periodSeconds: {{ .Values.startupprobe.periodSeconds }}
+  failureThreshold: {{ .Values.startupprobe.failureThreshold }}
 {{- end -}}

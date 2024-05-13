@@ -204,6 +204,7 @@ service:
         enabled: true
         protocol: http
         port: 10053
+        
 livenessprobe:
   enabled: true
   path: /-/healthy

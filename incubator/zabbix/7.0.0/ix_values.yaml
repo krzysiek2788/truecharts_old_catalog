@@ -44,16 +44,7 @@ database:
   type: postgresql
   # -- Enable DB Write-Ahead-Log for SQLite,
   wal: true
-workload:
-  main:
-    podSpec:
-      containers:
-        main:
-          env:
-            DB_SERVER_HOST:
-              secretKeyRef:
-                name: cnpg-main-urls
-                key: std
+
 zabbix:
   # -- https://www.zabbix.com/documentation/current/en/manual/appendix/config/zabbix_server
   server:

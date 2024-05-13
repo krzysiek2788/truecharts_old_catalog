@@ -20,6 +20,7 @@ data:
   DB_SERVER_HOST: {{ .Values.cnpg.main.creds.host | trimAll "\"" }}
   DB_SERVER_PORT: "5432"
   POSTGRES_USER: {{ .Values.cnpg.main.user | quote }}
+  POSTGRES_PASSWORD: {{ .Values.cnpg.main.password | trimAll "\"" }}
   POSTGRES_DB: {{ .Values.cnpg.main.database | quote }}
 
 ---

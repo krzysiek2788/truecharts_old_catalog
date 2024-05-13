@@ -1,31 +1,31 @@
 image:
   repository: zabbix/zabbix-server-pgsql
-  tag: 7.0@sha256-adcef2675dc09bb7ccd550c7f9245118ff96c067626bcd6fec6f36f5d33eac43
+  tag: 7.0@sha256:adcef2675dc09bb7ccd550c7f9245118ff96c067626bcd6fec6f36f5d33eac43
   pullPolicy: IfNotPresent
 
 frontendImage:
   repository: zabbix/zabbix-web-nginx-pgsql
-  tag: 7.0@sha256-10d5dfa05ddbab895d9cfbdf55bf51d80243af61bfb3586d467989747ccbc875
+  tag: 7.0@sha256:10d5dfa05ddbab895d9cfbdf55bf51d80243af61bfb3586d467989747ccbc875
   pullPolicy: IfNotPresent
 
 agent2Image:
   repository: zabbix/zabbix-agent2
-  tag: 7.0@sha256-7ae9e169dfc3235f00329afadd3eb252f7bc5a87ce2de9dc016fd67ec220b13f
+  tag: 7.0@sha256:7ae9e169dfc3235f00329afadd3eb252f7bc5a87ce2de9dc016fd67ec220b13f
   pullPolicy: IfNotPresent
 
 snmptrapsImage:
   repository: zabbix/zabbix-snmptraps
-  tag: 7.0@sha256-de79024b4dea93e996e5ce17e367693948d43df798b5b2733065abb8719bfc03
+  tag: 7.0@sha256:de79024b4dea93e996e5ce17e367693948d43df798b5b2733065abb8719bfc03
   pullPolicy: IfNotPresent
 
 javaGatewayImage:
   repository: zabbix/zabbix-java-gateway
-  tag: 7.0@sha256-d166e1983cca476b21a9a97a5a13860eef0e59e44772b68b4a34638189d8c630
+  tag: 7.0@sha256:d166e1983cca476b21a9a97a5a13860eef0e59e44772b68b4a34638189d8c630
   pullPolicy: IfNotPresent
 
 webServiceImage:
   repository: zabbix/zabbix-web-service
-  tag: 7.0@sha256-ae8e77582717ac401f16b052e05520cfdcde55383069469f45e37363c8c3b4e3
+  tag: 7.0@sha256:ae8e77582717ac401f16b052e05520cfdcde55383069469f45e37363c8c3b4e3
   pullPolicy: IfNotPresent
 
 tty: true

@@ -14,5 +14,5 @@ metadata:
   labels:
     {{- include "tc.v1.common.lib.metadata.allLabels" . | nindent 4 }}
 data:
-  POSTGRES_PASSWORD: {{ .Values.cnpg.main.password | trimAll "\"" }}
+  POSTGRES_PASSWORD: {{ .Values.cnpg.main.password | trimAll "\"" | b64enc}}
 {{- end }}

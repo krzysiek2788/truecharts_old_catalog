@@ -301,11 +301,11 @@ persistence:
     noMount: true
     mountPath: /etc/zabbix/zabbix_agentd.d
     size: 256Gi
-  agentenc:
-    enabled: true
-    noMount: true
-    mountPath: /var/lib/zabbix/enc
-    size: 256Gi
+#  agentenc:
+#    enabled: true
+#    noMount: true
+#    mountPath: /var/lib/zabbix/enc
+#    size: 256Gi
   agentbuffer:
     enabled: true
     noMount: true

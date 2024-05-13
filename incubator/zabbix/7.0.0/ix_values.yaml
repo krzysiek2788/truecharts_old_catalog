@@ -204,7 +204,7 @@ service:
         enabled: true
         protocol: http
         port: 10053
-        
+
 livenessprobe:
   enabled: true
   path: /-/healthy
@@ -325,4 +325,9 @@ cnpg:
     database: zabbix
 
 portal:
-  enabled: true
+  open:
+    enabled: true
+    
+ingress:
+  main:
+    required: true

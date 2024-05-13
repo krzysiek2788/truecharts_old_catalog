@@ -204,33 +204,33 @@ service:
         enabled: true
         protocol: http
         port: 10053
-  livenessprobe:
-    enabled: true
-    path: /-/healthy
-    initialDelaySeconds: 0
-    periodSeconds: 5
-    timeoutSeconds: 3
-    failureThreshold: 120
-    successThreshold: 1
-    port: "{{ .Values.service.server.ports.server.port }}"
-  readinessprobe:
-    enabled: true
-    path: /-/ready
-    initialDelaySeconds: 0
-    periodSeconds: 5
-    timeoutSeconds: 3
-    failureThreshold: 120
-    successThreshold: 1
-    port: "{{ .Values.service.server.ports.server.port }}"
-  startupprobe:
-    enabled: true
-    path: /-/ready
-    initialDelaySeconds: 0
-    periodSeconds: 5
-    timeoutSeconds: 3
-    failureThreshold: 120
-    successThreshold: 1
-    port: "{{ .Values.service.server.ports.server.port }}"
+livenessprobe:
+  enabled: true
+  path: /-/healthy
+  initialDelaySeconds: 0
+  periodSeconds: 5
+  timeoutSeconds: 3
+  failureThreshold: 120
+  successThreshold: 1
+  port: "{{ .Values.service.server.ports.server.port }}"
+readinessprobe:
+  enabled: true
+  path: /-/ready
+  initialDelaySeconds: 0
+  periodSeconds: 5
+  timeoutSeconds: 3
+  failureThreshold: 120
+  successThreshold: 1
+  port: "{{ .Values.service.server.ports.server.port }}"
+startupprobe:
+  enabled: true
+  path: /-/ready
+  initialDelaySeconds: 0
+  periodSeconds: 5
+  timeoutSeconds: 3
+  failureThreshold: 120
+  successThreshold: 1
+  port: "{{ .Values.service.server.ports.server.port }}"
 
 persistence:
   # Server

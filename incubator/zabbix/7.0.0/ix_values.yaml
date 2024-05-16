@@ -52,8 +52,9 @@ workload:
         main:
           env:
             DB_SERVER_HOST:
-              name: cnpg-main-urls
-              key: host
+              secretKeyRef:
+                name: cnpg-main-urls
+                key: host
 zabbix:
   # -- https://www.zabbix.com/documentation/current/en/manual/appendix/config/zabbix_server
   server:

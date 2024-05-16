@@ -55,6 +55,13 @@ workload:
               secretKeyRef:
                 name: cnpg-main-urls
                 key: host
+            POSTGRES_USER:  "{{ .Values.cnpg.main.user }}"
+            POSTGRES_DB: "{{ .Values.cnpg.main.database }}"
+            POSTGRES_PASSWORD:
+              secretKeyRef:
+                name: cnpg-main-user
+                key: password
+            
 zabbix:
   # -- https://www.zabbix.com/documentation/current/en/manual/appendix/config/zabbix_server
   server:

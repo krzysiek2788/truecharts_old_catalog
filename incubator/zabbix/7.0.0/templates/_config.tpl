@@ -18,8 +18,7 @@ metadata:
     {{- include "tc.v1.common.lib.metadata.allLabels" . | nindent 4 }}
 data:
   DB_SERVER_PORT: "5432"
-  POSTGRES_USER: {{ .Values.cnpg.main.user | quote }}
-  POSTGRES_PASSWORD: {{ .Values.cnpg.main.password | trimAll "\"" }}
+
 
 
 ---

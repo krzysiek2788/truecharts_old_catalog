@@ -251,6 +251,11 @@ startupprobe:
 
 persistence:
   # Server
+  serverconf:
+    enabled: true
+    noMount: true
+    mountPath: /etc/zabbix/
+    size: 256Gi
   serveralertscripts:
     enabled: true
     mountPath: "/usr/lib/zabbix/alertscripts"

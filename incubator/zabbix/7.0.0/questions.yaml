@@ -7231,13 +7231,13 @@ questions:
                 description: "The UserID of the user running the application"
                 schema:
                   type: int
-                  default: 568
+                  default: 1997
               - variable: runAsGroup
                 label: "runAsGroup"
                 description: "The groupID of the user running the application"
                 schema:
                   type: int
-                  default: 568
+                  default: 0
               # Settings from questions.yaml get appended here on a per-app basis
               - variable: PUID
                 label: Process User ID - PUID
@@ -7245,7 +7245,7 @@ questions:
                 schema:
                   type: int
                   show_if: [["runAsUser", "=", 0]]
-                  default: 568
+                  default: 1997
               - variable: UMASK
                 label: UMASK
                 description: When supported by the container, this sets the UMASK for the App. Not supported by all Apps
@@ -7265,12 +7265,12 @@ questions:
                       label: "Privileged mode"
                       schema:
                         type: boolean
-                        default: false
+                        default: true
                     - variable: readOnlyRootFilesystem
                       label: "ReadOnly Root Filesystem"
                       schema:
                         type: boolean
-                        default: true
+                        default: false
 
         - variable: pod
           label: Pod
@@ -7305,7 +7305,7 @@ questions:
                 description: "The group that should own ALL storage."
                 schema:
                   type: int
-                  default: 568
+                  default: 0
   - variable: resources
     group: Resources
     label: "Resource Limits"

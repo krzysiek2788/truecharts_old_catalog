@@ -31,12 +31,11 @@ webServiceImage:
 tty: true
 
 securityContext:
-  readOnlyRootFilesystem: false
-  runAsNonRoot: false
-
-podSecurityContext:
-  runAsUser: 1997
-  runAsGroup: 0
+  container:
+    runAsNonRoot: false
+    readOnlyRootFilesystem: false
+    runAsUser: 1997
+    runAsGroup: 0
   
 database:
   # -- Database type,

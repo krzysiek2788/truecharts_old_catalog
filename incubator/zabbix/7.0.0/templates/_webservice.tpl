@@ -2,10 +2,10 @@
 image: {{ .Values.webServiceImage.repository }}:{{ .Values.webServiceImage.tag }}
 imagePullPolicy: {{ .Values.webServiceImage.pullPolicy }}
 securityContext:
-  runAsUser: {{ .Values.podSecurityContext.runAsUser }}
-  runAsGroup: {{ .Values.podSecurityContext.runAsGroup }}
-  readOnlyRootFilesystem: {{ .Values.securityContext.readOnlyRootFilesystem }}
-  runAsNonRoot: {{ .Values.securityContext.runAsNonRoot }}
+  runAsUser: 1997
+  runAsGroup: 0
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 envFrom:
   - configMapRef:
       name: '{{ include "tc.v1.common.lib.chart.names.fullname" . }}-webservice-config'

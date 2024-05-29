@@ -2,10 +2,10 @@
 image: {{ .Values.javaGatewayImage.repository }}:{{ .Values.javaGatewayImage.tag }}
 imagePullPolicy: {{ .Values.javaGatewayImage.pullPolicy }}
 securityContext:
-  runAsUser: {{ .Values.podSecurityContext.runAsUser }}
-  runAsGroup: {{ .Values.podSecurityContext.runAsGroup }}
-  readOnlyRootFilesystem: {{ .Values.securityContext.readOnlyRootFilesystem }}
-  runAsNonRoot: {{ .Values.securityContext.runAsNonRoot }}
+  runAsUser: 1997
+  runAsGroup: 0
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 volumeMounts:
   - name: javagatewaylibs
     mountPath: {{ .Values.persistence.javagatewaylibs.mountPath }}

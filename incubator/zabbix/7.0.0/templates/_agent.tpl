@@ -2,10 +2,10 @@
 image: {{ .Values.agent2Image.repository }}:{{ .Values.agent2Image.tag }}
 imagePullPolicy: {{ .Values.agent2Image.pullPolicy }}
 securityContext:
-  runAsUser: {{ .Values.podSecurityContext.runAsUser }}
-  runAsGroup: {{ .Values.podSecurityContext.runAsGroup }}
-  readOnlyRootFilesystem: {{ .Values.securityContext.readOnlyRootFilesystem }}
-  runAsNonRoot: {{ .Values.securityContext.runAsNonRoot }}
+  runAsUser: 1997
+  runAsGroup: 0
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
   capabilities:
     add:
       - SYS_TIME

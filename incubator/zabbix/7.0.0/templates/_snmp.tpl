@@ -2,10 +2,10 @@
 image: {{ .Values.snmptrapsImage.repository }}:{{ .Values.snmptrapsImage.tag }}
 imagePullPolicy: {{ .Values.agent2Image.pullPolicy }}
 securityContext:
-  runAsUser: {{ .Values.podSecurityContext.runAsUser }}
-  runAsGroup: {{ .Values.podSecurityContext.runAsGroup }}
-  readOnlyRootFilesystem: {{ .Values.securityContext.readOnlyRootFilesystem }}
-  runAsNonRoot: {{ .Values.securityContext.runAsNonRoot }}
+  runAsUser: 1997
+  runAsGroup: 0
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
 volumeMounts:
   - name: snmptraps
     mountPath: {{ .Values.persistence.snmptraps.mountPath }}
